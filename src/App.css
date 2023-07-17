@@ -1,0 +1,241 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-image: url(https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?width=1200);
+  height: 40vh;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.row {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 32px;
+}
+
+
+
+ul {
+list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__links {
+  margin-left: 12px;
+}
+
+.nav__link {
+  font-size: 24px;
+  transition: all 300ms ;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.search__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.search__bar {
+  margin-top: 12px;
+  position: relative;
+  width: 50%;
+  height: 55%;
+}
+
+.search__bar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: black;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+/*
+
+content
+
+*/
+
+#content {
+  background-color: #242424;
+  min-height: 60vh;
+  width: 100%;
+  color: #fff;
+  position: relative;
+}
+
+.container {
+  margin: 0 32px;
+  display: block;
+}
+
+.section__title {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 40px;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.movie {
+  width: calc(100% / 4);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.movie__img--wrapper {
+  display: flex;
+  height: 80%;
+}
+
+.movie__img {
+  width: 100%;
+  padding: 0 12px;
+}
+
+.movie__name,
+.movie__date {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+
+.movies__loading {
+  
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #fff;
+}
+
+.fa-spinner {
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+   
+}
+
+
+/* MOVIESINFO */
+
+.movies__body {
+  background-color: #242424;
+  flex: 1;
+  display: flex;
+  height: 100vh;
+  color: #fff;
+}
+
+.movieinfo__link--home {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.movieinfo__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieinfo__img--wrapper {
+  width: 500px;
+  display: flex;
+  margin: 40px;
+}
+
+.recommended {
+display: flex;
+flex-direction: column;
+margin: 40px;
+}
+
+.recommended__movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.recommended__movie {
+  width: calc(100% / 4);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/*
+
+
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  .movie {
+      width: calc(100% / 2);
+  }
+}
