@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const Content = () => {
-  const id = useParams();
+ 
   const [showMovie, setShowMovie] = useState([]);
   const [search, setSearch] = useState("");
 
