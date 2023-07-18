@@ -7,7 +7,7 @@ const MovieInfo = () => {
   const [movieInfo, setMovieInfo] = useState([])
 
   async function movieFetch() {
-    const { data } = await axios.get(`http://www.omdbapi.com/?apikey=bdab0567&i=${imdbID}`)
+    const { data } = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=d90f3a14&i=${imdbID}`)
     setMovieInfo(data || [])
   }
 

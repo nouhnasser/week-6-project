@@ -17,7 +17,7 @@ const Content = () => {
 
   async function fetchMovies() {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?apikey=bdab0567&s=${search}`
+      `https://www.omdbapi.com/?i=tt3896198&apikey=d90f3a14&s=${search}`
     );
     setShowMovie(data.Search || []);
   }
