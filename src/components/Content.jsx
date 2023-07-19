@@ -10,6 +10,8 @@ const Content = () => {
   const [showMovie, setShowMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [load, setLoad] = useState(false);
+  const [searchResult, setSearchResult] = useState("")
+
 
   function filterMovies(filter) {
     if (filter === "OLDEST") {
@@ -67,7 +69,7 @@ const Content = () => {
                 type="text"
                 placeholder="Search your movie"
                 className="search"
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => setSearch(e.target.value, setSearchResult(search)) }
                 onKeyDown={submit}
               />
               <div className="searchmovies" onClick={fetchMovies}>
@@ -82,7 +84,7 @@ const Content = () => {
           <div className="container">
             {showMovie && 
               <div className="section__description">
-                <h2 className="section__title ">Search results : </h2>
+                <h2 className="section__title ">Search results : <span className="izq"></span> </h2>
                 <select
                   id="filter"
                   defaultValue="DEFAULT"

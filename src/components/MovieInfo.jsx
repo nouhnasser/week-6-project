@@ -37,11 +37,11 @@ const MovieInfo = () => {
           <div className="row">
 
          
-        <div class="waveform">
-  <div class="waveform__bar"></div>
-  <div class="waveform__bar"></div>
-  <div class="waveform__bar"></div>
-  <div class="waveform__bar"></div>
+        <div className="waveform">
+  <div className="waveform__bar"></div>
+  <div className="waveform__bar"></div>
+  <div className="waveform__bar"></div>
+  <div className="waveform__bar"></div>
 </div>
 </div>
         </div>
@@ -57,12 +57,12 @@ const MovieInfo = () => {
             </div>
             <div className="movieinfo__wrapper">
               <div className="movieinfo__img--wrapper">
-                <img src={movieInfo.Poster} alt="" className="movieinfo__img skeleton" />
+                <img src={movieInfo.Poster} alt="" className="movieinfo__img " />
               </div>
               <div className="movieinfo__des--wrapper">
-                <div className="movieinfo__title skeleton">Name: {movieInfo.Title}</div>
-                <div className="movieinfo__date skeleton">Date: {movieInfo.Year}</div>
-                <div className="movieinfo__summary skeleton">
+                <div className="movieinfo__title ">Name: {movieInfo.Title}</div>
+                <div className="movieinfo__date ">Date: {movieInfo.Year}</div>
+                <div className="movieinfo__summary ">
                   Summary: {movieInfo.Plot}
                 </div>
               </div>
@@ -70,6 +70,7 @@ const MovieInfo = () => {
           </div>
         </div>
       )}
+      
     </>
   );
 };
