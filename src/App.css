@@ -400,6 +400,17 @@ select {
 }
 
 @media (max-width: 550px) {
+  nav {
+    display: block;
+  }
+  .logo {
+    text-align: center;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
   .search__bar input {
     font-size: 12px;
   }

@@ -45,7 +45,7 @@ const Content = () => {
       <section id="header">
         <div className="row">
           <nav>
-            <h1 className="logo">Imovie</h1>
+            <h1 className="logo">Imovies</h1>
             <ul className="nav__list">
               <li className="nav__links">
                 <Link to="/" className="nav__link">
