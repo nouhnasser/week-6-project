@@ -10,8 +10,7 @@ const Content = () => {
   const [showMovie, setShowMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [load, setLoad] = useState(false);
-  const [searchResult, setSearchResult] = useState("")
-
+  const [searchResult, setSearchResult] = useState("");
 
   function filterMovies(filter) {
     if (filter === "OLDEST") {
@@ -29,6 +28,9 @@ const Content = () => {
       }, 1000);
       setLoad(true);
     }
+    setTimeout(() => {
+    document.querySelector(".section__description").style.display = "flex"
+    }, 2000);
   }
 
   async function fetchMovies() {
@@ -36,6 +38,7 @@ const Content = () => {
       `https://www.omdbapi.com/?apikey=d90f3a14&s=${search}`
     );
     setShowMovie(data.Search || []);
+    setSearchResult(search);
     setLoad(false);
   }
 
@@ -69,7 +72,7 @@ const Content = () => {
                 type="text"
                 placeholder="Search your movie"
                 className="search"
-                onChange={(e) => setSearch(e.target.value, setSearchResult(search)) }
+                onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={submit}
               />
               <div className="searchmovies" onClick={fetchMovies}>
@@ -82,9 +85,11 @@ const Content = () => {
       <section id="content">
         <div className="row">
           <div className="container">
-            {showMovie && 
+             
               <div className="section__description">
-                <h2 className="section__title ">Search results : <span className="izq"></span> </h2>
+                <h2 className="section__title ">
+                  Search results : <span className="izk">{searchResult}</span>{" "}
+                </h2>
                 <select
                   id="filter"
                   defaultValue="DEFAULT"
@@ -97,7 +102,7 @@ const Content = () => {
                   <option value="NEWEST">Date, Newest</option>
                 </select>
               </div>
-            }
+            
 
             <div className="movies">
               {load ? (

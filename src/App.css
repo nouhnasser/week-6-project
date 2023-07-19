@@ -122,7 +122,7 @@ content
 }
 
 .section__description {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
 }
@@ -145,6 +145,12 @@ select {
   padding-top: 24px;
   padding-bottom: 24px;
   font-size: 40px;
+  color: #606266;
+}
+
+.izk {
+  font-size: 30px;
+  color: #fff;
 }
 
 .movies {
