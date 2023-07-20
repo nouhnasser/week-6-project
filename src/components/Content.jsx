@@ -42,7 +42,6 @@ const Content = () => {
 
   useEffect(() => {
     fetchMovies();
-
   }, []);
   return (
     <>
@@ -115,7 +114,7 @@ const Content = () => {
                   .map((movie) => (
                     <div className="movie" key={movie.imdbID}>
                       <figure className="movie__img--wrapper">
-                        <Link to={`/izk/${movie.imdbID}`}>
+                        <Link to={`/id/${movie.imdbID}`}>
                           <img
                             src={movie.Poster}
                             alt={movie.Title}
