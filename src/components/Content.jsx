@@ -27,10 +27,8 @@ const Content = () => {
         fetchMovies();
       }, 1000);
       setLoad(true);
-    }
-    setTimeout(() => {
     document.querySelector(".section__description").style.display = "flex"
-    }, 2000);
+    }
   }
 
   async function fetchMovies() {
@@ -44,6 +42,7 @@ const Content = () => {
 
   useEffect(() => {
     fetchMovies();
+
   }, []);
   return (
     <>
