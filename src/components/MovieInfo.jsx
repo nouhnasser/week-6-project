@@ -63,7 +63,8 @@ const MovieInfo = () => {
                 <div className="movieinfo__title ">Name: {movieInfo.Title}</div>
                 <div className="movieinfo__date ">Date: {movieInfo.Year}</div>
                 <div className="movieinfo__summary ">
-                  Summary: {movieInfo.Plot}
+                  <h4 className="movieinfo__summary--title">Summary</h4>
+                  {movieInfo.Plot}
                 </div>
               </div>
             </div>

@@ -263,23 +263,31 @@ select {
 }
 
 .movieinfo__des--wrapper {
+  text-align: center;
   line-height: 2;
   font-weight: 900;
   font-size: 24px;
   width: 500px;
 }
 
+.movieinfo__title, .movieinfo__date, .movieinfo__summary {
+  border-bottom: 2px solid gray;
+
+}
+
 
 .movieinfo__summary {
   font-size: 16px;
   line-height: 1;
+  margin: 12px 0;
+  padding-bottom: 12px;
 }
 
-/* SKELETON */
-
-.movieinfo__title {
+.movieinfo__summary--title {
   font-size: 24px;
+  margin-bottom: 12px;
 }
+
 
 
 /* LOADING */ 
